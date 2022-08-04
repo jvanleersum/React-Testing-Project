@@ -17,7 +17,6 @@ describe("Greeting component", () => {
 
   test("renders Changed! as text if button was clicked", () => {
     render(<Greeting />);
-    //Act 
     const buttonElement = screen.getByRole('button')
     userEvent.click(buttonElement)
     const changedElement = screen.getByText("Changed!");
@@ -26,7 +25,6 @@ describe("Greeting component", () => {
 
   test("does not render good to see you if button was clicked", () => {
     render(<Greeting />);
-    //Act 
     const buttonElement = screen.getByRole('button')
     userEvent.click(buttonElement)
     const goodToSeeYouElement = screen.queryByText("It's good to see you!");
