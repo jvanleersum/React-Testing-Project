@@ -7,4 +7,10 @@ describe("Greeting component", () => {
     const helloWorldElement = screen.getByText("Hello World", { exact: false });
     expect(helloWorldElement).toBeInTheDocument();
   });
+
+  test("renders It\'s good to see you! as text if button is not clicked", () => {
+    render(<Greeting />);
+    const goodToSeeYouElement = screen.getByText("It's good to see you!");
+    expect(goodToSeeYouElement).toBeInTheDocument();
+  })
 });
